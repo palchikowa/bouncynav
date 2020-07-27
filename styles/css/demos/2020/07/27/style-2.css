@@ -1,0 +1,138 @@
+body {
+  position: relative;
+  background-color: #222;
+  font-family: 'Arial', sans-serif; }
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+  margin: 4em 1em 2em; }
+
+.p-home-link {
+  padding: 1em 2em;
+  border-radius: 3em; }
+
+.btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer; }
+
+.btn-browse {
+  display: block;
+  margin: 2em auto;
+  text-align: center;
+  background-color: #de4118;
+  padding: 1.2em 1.6em;
+  border-radius: 2em;
+  color: #fff;
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2); }
+  .btn-browse:active {
+    transform: translateY(1px); }
+  .btn-browse:hover {
+    background-color: #ea623f; }
+
+.btn-close {
+  position: absolute;
+  right: 3em;
+  top: 3em;
+  color: inherit;
+  z-index: 10; }
+  .btn-close svg {
+    display: block;
+    width: 2em;
+    height: 2em;
+    fill: currentColor;
+    stroke: currentColor;
+    transition: transform 0.3s ease-in; }
+  .btn-close:hover svg {
+    transform: rotate(180deg); }
+
+.bouncy-nav-modal {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .bouncy-nav-modal.--visible {
+    visibility: visible; }
+
+.bouncy-nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 580px;
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(50% - 200px); }
+.bouncy-nav li {
+  padding: 1em;
+  transform: translateY(100vh); }
+  .bouncy-nav li.--onplace {
+    transform: translateY(0); }
+  .bouncy-nav li.--move-in {
+    animation: move-in 0.5s ease;
+    animation-fill-mode: forwards; }
+  .bouncy-nav li.--move-out {
+    animation: move-out 0.8s ease;
+    animation-fill-mode: forwards; }
+  .bouncy-nav li:nth-child(1) {
+    animation-delay: 0.1s; }
+  .bouncy-nav li:nth-child(2) {
+    animation-delay: 0.15s; }
+  .bouncy-nav li:nth-child(3) {
+    animation-delay: 0.2s; }
+  .bouncy-nav li:nth-child(4) {
+    animation-delay: 0.25s; }
+  .bouncy-nav li:nth-child(5) {
+    animation-delay: 0.3s; }
+  .bouncy-nav li:nth-child(6) {
+    animation-delay: 0.35s; }
+.bouncy-nav a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  text-align: center; }
+.bouncy-nav span {
+  display: block;
+  padding: 1em;
+  font-size: 1.15em; }
+.bouncy-nav svg {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  padding: 1em;
+  border-radius: 50%;
+  fill: currentColor;
+  stroke: currentColor;
+  background-color: #5fcce7; }
+
+.--inactive {
+  pointer-events: none;
+  cursor: default; }
+
+@keyframes move-in {
+  0% {
+    transform: translateY(100vh); }
+  65% {
+    transform: translateY(-1.5vh); }
+  100% {
+    transform: translateY(0); } }
+@keyframes move-out {
+  0% {
+    transform: translateY(0); }
+  30% {
+    transform: translateY(1.5vh); }
+  100% {
+    transform: translateY(-100vh); } }
+@media (min-width: 700px) {
+  .bouncy-nav ul {
+    top: calc(50% - 190px);
+    left: calc(50% - 290px); } }
+
+/*# sourceMappingURL=style-2.css.map */
